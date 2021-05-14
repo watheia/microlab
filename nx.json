@@ -1,0 +1,40 @@
+{
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "microlab",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "Y2NhZjc2Y2YtZjJkMS00NzU3LTk5NWEtMjA3OTI5NzY5YWJjfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "gatekeeper": {
+      "tags": []
+    },
+    "gatekeeper-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "gatekeeper"
+      ]
+    }
+  }
+}
